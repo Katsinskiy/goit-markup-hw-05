@@ -83,8 +83,9 @@ border-bottom: 1px solid #ECECEC;}
     font-weight: 500;
     line-height: 0.87;
     letter-spacing: 0.02em;
-    transition: all 700ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
     .logo-item:not(:last-child) {
         margin-right:30px;}
@@ -96,7 +97,8 @@ border-bottom: 1px solid #ECECEC;}
     .adress-nav .link {color: var(--primary-text-color);
     font-weight: 500;
     line-height: 0.87;
-    letter-spacing: 0.02em;}
+    letter-spacing: 0.02em;
+   }
     
     .adress-nav .link:hover {color: var(--accent-color);}
     .adress-nav .link:focus {color: var(--accent-color);}
@@ -110,7 +112,9 @@ border-bottom: 1px solid #ECECEC;}
     line-height: 1.14;
     letter-spacing: 0.02em;
     display: block;
-    text-decoration: none;}
+    text-decoration: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
 
     .adress-nav-icon {fill: currentColor; margin-right: 10px;
@@ -121,6 +125,7 @@ border-bottom: 1px solid #ECECEC;}
 
     .adress-nav {display: flex;
         align-items: center;}
+
     .adress-nav .studio-meil {
     margin-right: 50px;}
 
@@ -131,6 +136,8 @@ border-bottom: 1px solid #ECECEC;}
     letter-spacing: 0.02em;
     display: block;
     text-decoration: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
     }
 
     .adress-nav-phone {fill: currentColor; margin-right: 10px;
@@ -196,7 +203,9 @@ border-bottom: 1px solid #ECECEC;}
         line-height: 1.8;
         letter-spacing: 0.06em;
     text-align: center;
+    
 }
+
 
     /*Особенности*/
 
@@ -364,6 +373,8 @@ height: 44px;
     justify-content: center;
     border-radius: 50%;
     color: #AFB1B8;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-soc-icon {fill: currentColor;}
@@ -405,7 +416,11 @@ align-items: baseline;}
     {text-decoration: none;
     font-style: normal;
     line-height: 0.06;
-    color: rgba(255, 255, 255, 0.6);}
+    color: rgba(255, 255, 255, 0.6);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
+}
+
     .link-footer:hover {color: var(--accent-color);}
     .link-footer:focus {color: var(--accent-color);}
 
@@ -453,6 +468,8 @@ padding-bottom: 20px;}
         justify-content: center;
         border-radius: 50%;
         color: white;
+       transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
     }
 
     .welcome-soc-list {
@@ -486,15 +503,19 @@ padding-bottom: 20px;}
     border-radius: 4px;
     background: #F5F4FA;
     transition: 0.2s;
-    text-align: center;}
+    text-align: center;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;}
 
     .button-nav {display: flex;
         justify-content: center;
         padding-bottom: 50px;
+       }
 
+
+
+    .btn-item { font-size: 500;
     
-}
-.btn-item { font-size: 500;
     }
   
    
@@ -524,7 +545,8 @@ padding-bottom: 20px;}
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--primary-text-color);}
+    color: var(--primary-text-color);
+}
 
     .products-img {display: block;}
 
@@ -532,12 +554,36 @@ padding-bottom: 20px;}
     margin: 0;
     font-size: 16px;
     line-height: 1.87;
-    color: var(--secondary-color);}
+    color: var(--secondary-color);
+}
 
 
     .products {margin-right: 30px;
     margin-bottom: 30px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    .product-thumb::before {
+        display: block;
+        position: absolute;
+        content: "";
+        width: 370px;
+        height: 294px;
+        background-color: rgba(33, 150, 243, 0.9);
+        opacity: 0;
+        }
+
+    /* .product-thumb::before {
+        content: 'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.';
+        font-size: 18px;
+        line-height: 1.55;
+        padding: 63px 24px;
+        color: var(--primary-white-color);
+        } */
+
+    .product-thumb:hover::before {opacity: 1;}
+
 
 
     .products:hover {box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);}
@@ -567,7 +613,13 @@ padding-bottom: 20px;}
         width: 170px;
         height: 92px;
         border: 1px solid #AFB1B8;
-        border-radius: 4px;}
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .customers-item:hover {border: 1px solid var(--accent-color);
+
+    }
 
     .customers-item + .customers-item {margin-left: 30px;}
 
@@ -578,12 +630,41 @@ padding-bottom: 20px;}
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #AFB1B8;}
+        color: #AFB1B8;
+        transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
     .customers-icon {fill: currentColor;}
         
     .customers-link:hover {
         background-color: var(--accent-color);
         color: var(--primary-white-color);}
+
+
+
+        /* --------------------------Modal------------------------ */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+.modal {
+    width: 500px;
+    min-height: 600px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+      
+}
 
   
