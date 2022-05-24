@@ -45,7 +45,7 @@
      
        <section class="hero hero-fone">        
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="order-services" type="button">Заказать услугу</button>
+        <button data-modal-open type="button" class="order-services" >Заказать услугу</button>
        
         </section>
     
@@ -392,14 +392,13 @@
   </footer>
 
 
-  <div class="backdrop">
+  <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-
-      <button type="button" class="modal-closed-btn">
-
-        
-      </button>
-      
+      <button data-modal-close type="button" class="modal-closed-btn">
+        <svg class="modal-btn-icon" width="18px" height="18px">
+          <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+        </svg>
+      </button>      
     </div>
   </div>
 
