@@ -134,6 +134,8 @@ border-bottom: 1px solid #ECECEC;}
     .site-nav .link-current {font-weight: 500;
         color: var(--accent-color); }
 
+        
+
     .studio-meil {
     color: var(--secondary-color);
     font-weight: 500;
@@ -497,6 +499,7 @@ padding-bottom: 20px;}
         border-radius: 50%;
         color: white;
        transition-duration: 250ms;
+       
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);;
     }
 
@@ -588,8 +591,6 @@ padding-bottom: 20px;}
 
     .products {margin-right: 30px;
     margin-bottom: 30px;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     /* .product-thumb::after {
@@ -610,13 +611,16 @@ padding-bottom: 20px;}
         /* display: none; */
         position: absolute;
         opacity: 0;
-        transform: translateY(-400px);}
+        transform: translateY(-400px);
+        transition-duration: 1000ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
 
         
 
             
      .product-thumb:hover {
-         opacity: 1;}
+         opacity: 1;
+         transform: translateY(-108px) }
 
 
 
